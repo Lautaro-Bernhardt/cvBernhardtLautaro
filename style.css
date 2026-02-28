@@ -499,3 +499,261 @@ h3 {
         padding: 2rem 1rem;
     }
 }
+
+/* --- Botón Flotante de Descarga --- */
+.download-btn {
+    position: fixed;
+    bottom: 2rem;
+    right: 2rem;
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    background: var(--gradient-accent);
+    color: var(--bg-dark);
+    font-size: 1.5rem;
+    border: none;
+    box-shadow: 0 4px 15px rgba(0, 242, 254, 0.4);
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 100;
+    transition: var(--transition-smooth);
+}
+
+.download-btn:hover {
+    transform: translateY(-5px) scale(1.05);
+    box-shadow: 0 8px 25px rgba(0, 242, 254, 0.6);
+}
+
+/* --- Estilos Optimizados para Impresión (1 Carilla A4) --- */
+@media print {
+    @page {
+        margin: 0;
+        size: A4 portrait;
+    }
+
+    * {
+        -webkit-print-color-adjust: exact !important;
+        print-color-adjust: exact !important;
+    }
+
+    body {
+        background: #ffffff !important;
+        color: #111 !important;
+        font-size: 11px !important;
+    }
+
+    .bg-mesh,
+    .download-btn {
+        display: none !important;
+    }
+
+    .glass-card {
+        background: transparent !important;
+        backdrop-filter: none !important;
+        border: none !important;
+        box-shadow: none !important;
+        padding: 0 0 0.5rem 0 !important;
+        margin: 0 !important;
+    }
+
+    .container {
+        max-width: 100% !important;
+        padding: 1.5cm !important;
+        grid-template-columns: 240px 1fr !important;
+        gap: 1.5rem !important;
+        margin: 0 !important;
+        height: 100vh !important;
+        overflow: hidden !important;
+    }
+
+    .sidebar {
+        top: 0 !important;
+        gap: 1rem !important;
+    }
+
+    .main-content {
+        gap: 1rem !important;
+    }
+
+    .profile-card {
+        padding: 0 !important;
+        text-align: left;
+    }
+
+    .profile-card::before {
+        display: none !important;
+    }
+
+    .avatar {
+        width: 90px !important;
+        height: 90px !important;
+        margin: 0 0 0.5rem 0 !important;
+        box-shadow: none !important;
+    }
+
+    .avatar-container {
+        justify-content: flex-start !important;
+        margin-bottom: 0.5rem !important;
+    }
+
+    .name {
+        font-size: 1.8rem !important;
+        background: none !important;
+        color: #111 !important;
+        -webkit-text-fill-color: #111 !important;
+        margin-bottom: 0.2rem !important;
+        line-height: 1 !important;
+        background-clip: text !important;
+    }
+
+    .subtitle {
+        font-size: 0.85rem !important;
+        color: #444 !important;
+    }
+
+    .section-title {
+        font-size: 1.2rem !important;
+        margin-bottom: 0.5rem !important;
+        color: #222 !important;
+        border-bottom: 2px solid #ccc;
+        padding-bottom: 0.2rem;
+    }
+
+    .section-title i {
+        color: #555 !important;
+        font-size: 1rem !important;
+    }
+
+    h3 {
+        font-size: 1rem !important;
+        margin-bottom: 0.5rem !important;
+    }
+
+    .contact-list gap {
+        gap: 0.3rem !important;
+    }
+
+    .contact-list li {
+        font-size: 0.8rem !important;
+        margin-bottom: 0.3rem !important;
+    }
+
+    .contact-list i {
+        display: none !important;
+    }
+
+    .tags {
+        gap: 0.3rem !important;
+    }
+
+    .tag {
+        padding: 0.2rem 0.4rem !important;
+        font-size: 0.75rem !important;
+        border-color: #ddd !important;
+        color: #333 !important;
+        background: #f0f0f0 !important;
+        border: 1px solid #ddd !important;
+    }
+
+    .timeline {
+        padding-left: 1rem !important;
+    }
+
+    .timeline::before {
+        background: #ccc !important;
+        left: 0 !important;
+    }
+
+    .timeline-item {
+        margin-bottom: 1rem !important;
+    }
+
+    .timeline-dot {
+        width: 10px !important;
+        height: 10px !important;
+        border: 2px solid #555 !important;
+        background: white !important;
+        left: -1.35rem !important;
+        top: 0.2rem !important;
+        box-shadow: none !important;
+    }
+
+    .timeline-date {
+        background: transparent !important;
+        color: #555 !important;
+        padding: 0 !important;
+        margin-bottom: 0.2rem !important;
+        font-size: 0.75rem !important;
+        font-weight: bold !important;
+        display: block !important;
+    }
+
+    .timeline-content {
+        padding: 0 !important;
+    }
+
+    .role {
+        font-size: 0.95rem !important;
+        margin-bottom: 0.1rem !important;
+        color: #111 !important;
+    }
+
+    .company {
+        font-size: 0.85rem !important;
+        margin-bottom: 0.3rem !important;
+        color: #444 !important;
+    }
+
+    .timeline-content ul {
+        padding-left: 0.5rem !important;
+    }
+
+    .timeline-content li {
+        margin-bottom: 0.2rem !important;
+        line-height: 1.3 !important;
+    }
+
+    .timeline-content li::before {
+        color: #555 !important;
+    }
+
+    .grid-2-col {
+        gap: 1rem !important;
+        grid-template-columns: 1fr 1fr !important;
+    }
+
+    p {
+        margin-bottom: 0.3rem !important;
+        line-height: 1.3 !important;
+        color: #333 !important;
+    }
+
+    .mt-4 {
+        margin-top: 0.5rem !important;
+    }
+
+    .progress-bar-container {
+        background: #eee !important;
+        height: 4px !important;
+        margin-top: 0.2rem !important;
+    }
+
+    .progress-bar {
+        background: #777 !important;
+    }
+
+    .tool-header {
+        margin-bottom: 0 !important;
+        font-size: 0.8rem !important;
+    }
+
+    .tool-desc {
+        font-size: 0.75rem !important;
+    }
+
+    .stack-container {
+        gap: 0.8rem !important;
+    }
+}
