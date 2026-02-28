@@ -590,6 +590,9 @@ h3 {
     .profile-card {
         padding: 0 !important;
         text-align: left;
+        background: transparent !important;
+        border: none !important;
+        box-shadow: none !important;
     }
 
     .profile-card::before {
@@ -601,11 +604,13 @@ h3 {
         height: 85px !important;
         margin: 0 0 0.5rem 0 !important;
         box-shadow: none !important;
+        background: transparent !important;
     }
 
     .avatar-container {
         justify-content: flex-start !important;
         margin-bottom: 0.5rem !important;
+        background: transparent !important;
     }
 
     .name {
