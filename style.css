@@ -540,8 +540,16 @@ h3 {
 
     body {
         background: #ffffff !important;
-        color: #111 !important;
+        color: #000000 !important;
         font-size: 11px !important;
+    }
+
+    /* Redefinir variables CSS para asegurar negros para la impresión si algo quedó colgando */
+    :root {
+        --text-main: #000000 !important;
+        --text-muted: #222222 !important;
+        --accent-1: #333333 !important;
+        --accent-2: #555555 !important;
     }
 
     .bg-mesh,
@@ -558,14 +566,16 @@ h3 {
         margin: 0 !important;
     }
 
+    /* Contenedor principal sin ataduras de alto para que respire nativamente */
     .container {
         max-width: 100% !important;
-        padding: 1.5cm !important;
-        grid-template-columns: 240px 1fr !important;
+        padding: 1.5cm 1.5cm 1cm 1.5cm !important;
+        grid-template-columns: 220px 1fr !important;
         gap: 1.5rem !important;
         margin: 0 !important;
-        height: 100vh !important;
-        overflow: hidden !important;
+        height: auto !important;
+        /* IMPORTANTE: Dejar flujo natural */
+        overflow: visible !important;
     }
 
     .sidebar {
@@ -587,8 +597,8 @@ h3 {
     }
 
     .avatar {
-        width: 90px !important;
-        height: 90px !important;
+        width: 85px !important;
+        height: 85px !important;
         margin: 0 0 0.5rem 0 !important;
         box-shadow: none !important;
     }
@@ -599,45 +609,55 @@ h3 {
     }
 
     .name {
-        font-size: 1.8rem !important;
+        font-size: 1.6rem !important;
         background: none !important;
-        color: #111 !important;
-        -webkit-text-fill-color: #111 !important;
+        color: #000 !important;
+        -webkit-text-fill-color: #000 !important;
         margin-bottom: 0.2rem !important;
-        line-height: 1 !important;
+        line-height: 1.1 !important;
         background-clip: text !important;
     }
 
     .subtitle {
         font-size: 0.85rem !important;
         color: #444 !important;
+        margin-bottom: 1rem !important;
     }
 
     .section-title {
-        font-size: 1.2rem !important;
+        font-size: 1.15rem !important;
         margin-bottom: 0.5rem !important;
-        color: #222 !important;
-        border-bottom: 2px solid #ccc;
+        color: #111 !important;
+        border-bottom: 2px solid #ddd;
         padding-bottom: 0.2rem;
     }
 
     .section-title i {
-        color: #555 !important;
+        color: #444 !important;
         font-size: 1rem !important;
     }
 
     h3 {
         font-size: 1rem !important;
         margin-bottom: 0.5rem !important;
+        color: #000 !important;
     }
 
+    /* Links y contactos forzados a negro */
     .contact-list gap {
         gap: 0.3rem !important;
     }
 
     .contact-list li {
-        font-size: 0.8rem !important;
+        font-size: 0.75rem !important;
         margin-bottom: 0.3rem !important;
+        color: #111 !important;
+    }
+
+    .contact-list a,
+    .contact-list span {
+        color: #111 !important;
+        text-decoration: none !important;
     }
 
     .contact-list i {
@@ -649,16 +669,16 @@ h3 {
     }
 
     .tag {
-        padding: 0.2rem 0.4rem !important;
-        font-size: 0.75rem !important;
-        border-color: #ddd !important;
-        color: #333 !important;
-        background: #f0f0f0 !important;
-        border: 1px solid #ddd !important;
+        padding: 0.15rem 0.35rem !important;
+        font-size: 0.7rem !important;
+        border-color: #ccc !important;
+        color: #111 !important;
+        background: #f8f8f8 !important;
+        border: 1px solid #ccc !important;
     }
 
     .timeline {
-        padding-left: 1rem !important;
+        padding-left: 0.8rem !important;
     }
 
     .timeline::before {
@@ -667,16 +687,16 @@ h3 {
     }
 
     .timeline-item {
-        margin-bottom: 1rem !important;
+        margin-bottom: 0.8rem !important;
     }
 
     .timeline-dot {
-        width: 10px !important;
-        height: 10px !important;
-        border: 2px solid #555 !important;
+        width: 8px !important;
+        height: 8px !important;
+        border: 2px solid #444 !important;
         background: white !important;
-        left: -1.35rem !important;
-        top: 0.2rem !important;
+        left: -1.05rem !important;
+        top: 0.3rem !important;
         box-shadow: none !important;
     }
 
@@ -684,7 +704,7 @@ h3 {
         background: transparent !important;
         color: #555 !important;
         padding: 0 !important;
-        margin-bottom: 0.2rem !important;
+        margin-bottom: 0.1rem !important;
         font-size: 0.75rem !important;
         font-weight: bold !important;
         display: block !important;
@@ -696,13 +716,14 @@ h3 {
 
     .role {
         font-size: 0.95rem !important;
-        margin-bottom: 0.1rem !important;
-        color: #111 !important;
+        margin-bottom: 0 !important;
+        color: #000 !important;
+        font-weight: 600 !important;
     }
 
     .company {
         font-size: 0.85rem !important;
-        margin-bottom: 0.3rem !important;
+        margin-bottom: 0.2rem !important;
         color: #444 !important;
     }
 
@@ -711,12 +732,14 @@ h3 {
     }
 
     .timeline-content li {
-        margin-bottom: 0.2rem !important;
-        line-height: 1.3 !important;
+        margin-bottom: 0.15rem !important;
+        line-height: 1.25 !important;
+        font-size: 0.8rem !important;
+        color: #222 !important;
     }
 
     .timeline-content li::before {
-        color: #555 !important;
+        color: #444 !important;
     }
 
     .grid-2-col {
@@ -725,9 +748,14 @@ h3 {
     }
 
     p {
-        margin-bottom: 0.3rem !important;
+        margin-bottom: 0.2rem !important;
         line-height: 1.3 !important;
-        color: #333 !important;
+        color: #111 !important;
+        font-size: 0.8rem !important;
+    }
+
+    .about p {
+        font-size: 0.8rem !important;
     }
 
     .mt-4 {
@@ -735,25 +763,27 @@ h3 {
     }
 
     .progress-bar-container {
-        background: #eee !important;
-        height: 4px !important;
+        background: #ddd !important;
+        height: 3px !important;
         margin-top: 0.2rem !important;
     }
 
     .progress-bar {
-        background: #777 !important;
+        background: #555 !important;
     }
 
     .tool-header {
         margin-bottom: 0 !important;
         font-size: 0.8rem !important;
+        color: #000 !important;
     }
 
     .tool-desc {
         font-size: 0.75rem !important;
+        color: #333 !important;
     }
 
     .stack-container {
-        gap: 0.8rem !important;
+        gap: 0.6rem !important;
     }
 }
